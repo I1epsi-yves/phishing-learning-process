@@ -20,13 +20,16 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
-
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { GraphiqueComponent } from './graphique/graphique.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent
+    ContactComponent,
+    GraphiqueComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxChartsModule,
     MatDatepickerModule,
     MatNativeDateModule,
     NoopAnimationsModule

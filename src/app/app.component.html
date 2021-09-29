@@ -1,25 +1,20 @@
+<div >
 <p><img src="assets/image/fish.jpg" width=" 100px">
 
  <img src="assets/image/fish.jpg" width=" 100px" style="float:right">
 </p>
- <h1 style="text-align: center;">Phishing Learning Process</h1>
+ <h1 style="text-align: center;">106MAIL</h1>
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Accueil">
-  <form style="text-align: center;">
-    <br/>
-    <b>Mail : </b><br/>
-    <textarea style="resize:none" name="objectifs" cols="100" rows="6" #objectifs="ngModel" ngModel></textarea><br/>
-    <br/>
-    <b>Destinataire :</b><br/>
-      <input type="text" name="destinataire" #destinataire="ngModel" ngModel/>
-      <button (click)="ajout(destinataire.value)">ajouter</button>
-      <table class="fl-table">
-        <tr *ngFor="let d of listeDestinataire" >
-          {{d}}
-        </tr>
-      </table>
-      <app-contact></app-contact>
+  <form >
+    <app-contact [comptes]="compte"></app-contact>
   </form>
   </mat-tab>
-</mat-tab-group>
 
+  <mat-tab label="Compte">
+    <form >
+        <app-ajout-compte (comptes)="newComptes($event)"></app-ajout-compte>
+    </form>
+  </mat-tab>
+</mat-tab-group>
+</div>

@@ -22,11 +22,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { AjoutCompteComponent } from './ajout-compte/ajout-compte.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactComponent
+    ContactComponent,
+    AjoutCompteComponent
   ],
   imports: [
     BrowserModule,

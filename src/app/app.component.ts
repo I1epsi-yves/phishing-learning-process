@@ -1,6 +1,7 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Component, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Compte } from './ajout-compte/Compte';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +12,7 @@ export class AppComponent {
   listeDestinataire:string[]=[];
   title = 'phishing-learning-process';
   http: any;
+  compte:Compte[]=[];
 
   ajout(d:string):void{
     this.listeDestinataire.push(d);
@@ -27,6 +29,13 @@ export class AppComponent {
             console.log(response);
           }
         );
+    }
+  }
+
+  newComptes(c:Compte[]):void{
+    this.compte=c;
+    for(let e of c){
+    console.log(e.mail)
     }
   }
 }

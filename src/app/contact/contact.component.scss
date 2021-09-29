@@ -4,16 +4,8 @@
 .visible {
 	display: block
 }
-.center-text {
-	text-align: center
-}
 form.contact {
-	display: flex;
-	flex-direction: column;
-	max-width: 200px;
-	width: 200px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 20%;
 	margin-top: 30px;
 }
 input,
@@ -24,13 +16,17 @@ button {
 	margin-top: 10px;
 	background-color: transparent;
 	color: black;
-	border: 1px solid black;
-	padding: 4px 16px;
-	transition: 0.4s;
-	width: 100%;
-	margin-top: 10px;
 }
 button:hover:enabled{
 	color: white;
 	background-color: black;
+}
+
+.example-form {
+	margin-left: 20%;
+	margin-top: 30px;
+}
+
+.example-full-width {
+  width: 80%;
 }

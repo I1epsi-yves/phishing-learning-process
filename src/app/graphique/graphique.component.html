@@ -1,10 +1,8 @@
-<select  (change)="changementdeDonnees($event.target.value)">
-    <option>equipement</option>
-    <option>alarme</option>
-  </select>
-  <ngx-charts-pie-chart
+<select class="graph" (ngModel)="startValue" #device (change)="changementdeDonnees(device.value)">
+    <option *ngFor="let campagne of this.listeCampagnes">{{campagne.getCampagne_kn()}}</option>
+</select>
+<ngx-charts-pie-chart
     [view]="view"
-    [scheme]="colorScheme"
     [results]="data"
     [gradient]="gradient"
     [legend]="showLegend"
@@ -15,5 +13,5 @@
     (activate)="onActivate($event)"
     (deactivate)="onDeactivate($event)"
     >
-  </ngx-charts-pie-chart>
-  <span>Total : {{totalDonnee}}</span>
+</ngx-charts-pie-chart>
+

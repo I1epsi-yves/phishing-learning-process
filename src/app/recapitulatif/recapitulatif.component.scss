@@ -1,0 +1,117 @@
+.boutonFamille
+{
+  background-color: White; 
+  border: none; 
+  color: black; 
+  padding: 5px ; 
+  font-size: 16px; 
+  cursor: pointer; 
+  border-radius: 10px;
+}
+  
+.boutonFamille:hover 
+{
+  background-color: gray;
+}
+
+.boutonMessage 
+{
+  background-color: White; 
+  border: none; 
+  color: black; 
+  font-size: 16px; 
+  cursor: pointer; 
+  padding: 0px 10px; 
+  border-radius: 10px;
+}
+
+.boutonMessage:hover 
+{
+  background-color: gray;
+}
+
+.formeImportanceHaute 
+{
+  background-color: White; 
+  border: none; 
+  color: black; 
+  font-size: 16px; 
+  margin-left: 50px;
+}
+
+
+.espacementInterColonne
+{
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+.espacementTableGestion
+{
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.espacementTitreContenu
+{
+  padding-bottom: 50px;
+}
+
+.espaceInterLigne
+{
+    line-height: 180%;
+}
+
+.alignementTitre
+{
+  text-align: center;
+  line-height: 20px;
+  font-size: 15px;
+}
+
+.alignementTexte
+{
+  text-align: center;
+  line-height: 50px;
+}
+
+
+.alignementForme
+{
+  line-height: 50px;
+}
+
+.ecartementElementPage
+{
+  margin-right: 20px;
+}
+
+.ecartementNumeroPage
+{
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 15px;
+
+}
+
+.grillePagination
+{
+  display: grid;
+  grid-template-columns: 1500px;
+}
+
+.colonneGauchePagination
+{
+  grid-column: 1;
+}
+
+.colonneDroitePagination
+{
+  grid-column: 2;
+}
+
+.centrageTable
+{
+  margin-left: auto;
+  margin-right: auto;
+}

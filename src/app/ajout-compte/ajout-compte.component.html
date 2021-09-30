@@ -1,0 +1,71 @@
+<form class="example-form">
+
+
+
+    <b >COORDONNEES DE COMPTE :</b>
+    <br/>
+    <br/>
+
+    <div class="container" style="display:flex">
+      <div class="item">
+        <mat-form-field class="example-form-field">
+          <mat-label>Nom</mat-label>
+          <input matInput type="text" name="nom" class="form-control" required #nom="ngModel" ngModel>
+        </mat-form-field>
+        <div *ngIf="nom.invalid && (nom.dirty || nom.touched)" class="alert" style="color:red; position: relative; left:18%;bottom:15%">
+          entrée invalide
+        </div>
+      </div>
+      </div>
+
+      <div class="container" style="display:flex">
+      <div class="item" >
+        <mat-form-field class="example-form-field">
+          <mat-label>Prenom</mat-label>
+          <input matInput type="text" name="prenom" class="form-control" required #prenom="ngModel" ngModel>
+        </mat-form-field>
+
+        <div *ngIf="prenom.invalid && (prenom.dirty || prenom.touched)" class="alert" style="color:red; position: relative; left:25%;bottom:15%">
+          entrée invalide
+        </div>
+      </div>
+      </div>
+
+      <div class="container" style="display:flex">
+      <div class="item" >
+        <mat-form-field class="example-form-field">
+          <mat-label>Pole</mat-label>
+          <input matInput type="text" name="pole" class="form-control" required #pole="ngModel" ngModel>
+        </mat-form-field>
+
+        <div *ngIf="pole.invalid && (pole.dirty || pole.touched)" class="alert" style="color:red; position: relative; left:25%;bottom:15%">
+          entrée invalide
+        </div>
+      </div>
+
+    </div>
+
+
+    <mat-form-field class="example-form-field">
+      <mat-label>Mail</mat-label>
+      <input matInput [(ngModel)]="mail" placeholder="aaa@exemple.com" matInput [formControl]="email" required>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <table class="fl-table">
+      <tr *ngFor="let d of compte" >
+        {{d.mail}}
+      </tr>
+    </table>
+
+
+  <button mat-raised-button color="primary" (click)="ajout({nom:nom.value,
+    prenom:prenom.value,
+    pole:pole.value,
+    mail:mail
+      })"
+      (click)="comptes.emit(compte)">
+    ajouter
+    </button>
+
+  </form>

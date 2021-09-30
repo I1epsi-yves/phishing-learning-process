@@ -1,8 +1,9 @@
+<div >
 <p><img src="assets/image/fish.jpg" width=" 100px">
 
  <img src="assets/image/fish.jpg" width=" 100px" style="float:right">
 </p>
- <h1 style="text-align: center;">Phishing Learning Process</h1>
+ <h1 style="text-align: center;">106MAIL</h1>
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Accueil">
   <form style="text-align: center;">
@@ -20,4 +21,14 @@
       </form>
   </mat-tab>
 </mat-tab-group>
-
+  <form >
+    <app-contact [comptes]="Compte"></app-contact>
+  </form>
+  </mat-tab>
+  <mat-tab label="Compte">
+    <form >
+        <app-ajout-compte (comptes)="newComptes($event)"></app-ajout-compte>
+    </form>
+  </mat-tab>
+</mat-tab-group>
+</div>

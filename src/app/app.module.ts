@@ -20,7 +20,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
-
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { GraphiqueComponent } from './graphique/graphique.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
@@ -29,12 +28,15 @@ import { ComptePhishingService } from './service/ComptePhishingService';
 import { CompteService } from './service/CompteService';
 import { IdentifiantService } from './service/IdentifiantService';
 import { RecapitulatifComponent } from './recapitulatif/recapitulatif.component';
+import { AjoutCompteComponent } from './ajout-compte/ajout-compte.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
     GraphiqueComponent,
     RecapitulatifComponent
+    AjoutCompteComponent
   ],
   imports: [
     BrowserModule,

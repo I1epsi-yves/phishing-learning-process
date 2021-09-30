@@ -1,34 +1,32 @@
-<form class="contact" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
 
-  <mat-form-field>
-    <mat-label>Name</mat-label>
-    <input matInput [formControl]="name" required>
-    <mat-error *ngIf="name.invalid">Please enter your name</mat-error>
-  </mat-form-field>
+<form class="example-form" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
 
-  <mat-form-field>
-    <mat-label>Email</mat-label>
-    <input matInput [formControl]="email" placeholder="email@example.com" required>
-    <mat-error *ngIf="email.invalid">Please enter a valid email</mat-error>
-  </mat-form-field>
 
-  <button (click)="ajout(email)">ajouter</button>
+
+
+
+
   <table class="fl-table">
-    <tr *ngFor="let d of listEmail" >
-      {{d.value}}
+    <tr *ngFor="let d of comptes" >
+      {{d.mail}}
     </tr>
   </table>
 
   <mat-form-field>
+    <mat-label>Objet</mat-label>
+    <input matInput [formControl]="objet" required>
+    <mat-error *ngIf="objet.invalid">Please enter your object </mat-error>
+  </mat-form-field>
+  <br/>
+  <mat-form-field appearance="fill" class="example-full-width">
     <mat-label>Message</mat-label>
-
-    <textarea matInput [formControl]="message" maxlength="256" placeholder="I'm interested in..." required></textarea>
-
+    <textarea matInput [formControl]="message" rows="15" required></textarea>
     <mat-error *ngIf="message.invalid">Please enter a message</mat-error>
   </mat-form-field>
-  <button [disabled]="isLoading" class="submit" type="submit">Submit</button>
+  <br/>
+
+  <button [disabled]="isLoading" class="submit" type="submit" style="margin-left: 275px;">Submit</button>
   <input [formControl]="honeypot" class="hidden" type="text" />
   <div [ngClass]="!submitted? 'hidden' : 'visible'" class="center-text">
     <span>{{responseMessage}}</span>
   </div>
-</form>

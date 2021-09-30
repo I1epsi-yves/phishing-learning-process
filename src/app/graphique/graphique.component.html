@@ -1,0 +1,17 @@
+<select class="graph" (ngModel)="startValue" #device (change)="changementdeDonnees(device.value)">
+    <option *ngFor="let campagne of this.listeCampagnes">{{campagne.getCampagne_kn()}}</option>
+</select>
+<ngx-charts-pie-chart
+    [view]="view"
+    [results]="data"
+    [gradient]="gradient"
+    [legend]="showLegend"
+    [legendPosition]="legendPosition"
+    [labels]="showLabels"
+    [doughnut]="isDoughnut"
+    (select)="onSelect($event)"
+    (activate)="onActivate($event)"
+    (deactivate)="onDeactivate($event)"
+    >
+</ngx-charts-pie-chart>
+

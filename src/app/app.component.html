@@ -6,11 +6,25 @@
  <h1 style="text-align: center;">106MAIL</h1>
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label="Accueil">
-  <form >
-    <app-contact [comptes]="compte"></app-contact>
+  <form style="text-align: center;">
+      <app-contact></app-contact>
   </form>
   </mat-tab>
-
+  <mat-tab label="Graphique">
+    <form style="text-align: center;">
+        <app-graphique></app-graphique>
+    </form>
+  </mat-tab>
+    <mat-tab label="Récapitulatif">
+      <form style="text-align: center;">
+          <app-recapitulatif></app-recapitulatif>
+      </form>
+  </mat-tab>
+</mat-tab-group>
+  <form >
+    <app-contact [comptes]="Compte"></app-contact>
+  </form>
+  </mat-tab>
   <mat-tab label="Compte">
     <form >
         <app-ajout-compte (comptes)="newComptes($event)"></app-ajout-compte>

@@ -1,0 +1,40 @@
+<table class="centrageTable">
+    <thead>
+        <tr>
+            <th class="alignementTitre espacementInterColonne espacementTitreContenu">Nom</th>
+            <th class="alignementTitre espacementInterColonne espacementTitreContenu">Prénom</th>
+            <th class="alignementTitre espacementInterColonne espacementTitreContenu">Email</th>
+            <th class="alignementTitre espacementInterColonne espacementTitreContenu">Pole</th>
+            <th class="alignementTitre espacementInterColonne espacementTitreContenu">Etat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="espacementInterColonne">
+                <div class="alignementTexte" *ngFor="let compte of listeCompte">{{compte.getNom()}}</div>
+            </td>
+            <td class="espacementInterColonne">
+                <div class="alignementTexte" *ngFor="let compte of listeCompte">{{compte.getPrenom()}}</div>
+            </td>
+            <td class="espacementInterColonne">
+                <div class="alignementTexte" *ngFor="let compte of listeCompte">{{compte.getEmail()}}</div>
+            </td>
+            <td class="espacementInterColonne">
+                <div class="alignementTexte" *ngFor="let compte of listeCompte">{{compte.getPole()}}</div>
+            </td>
+            <td class="espacementInterColonne">
+                <div class="alignementForme"  *ngFor="let compte of listeCompte">
+                    <div *ngIf="compte.getEtat_kn()==2">
+                        <div class="formeImportanceHaute"><mat-icon>settings</mat-icon></div>
+                    </div>
+                    <div *ngIf="compte.getEtat_kn()==1">
+                        <div class="formeImportanceHaute">	<mat-icon>check</mat-icon></div>
+                    </div>
+                    <div *ngIf="compte.getEtat_kn()==0">
+                        <div class="formeImportanceHaute"><mat-icon>close</mat-icon></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>

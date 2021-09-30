@@ -1,7 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { ComptePhishing } from '../entity/ComptePhishing';
 
-export class CampagneService
+@Injectable()
+export class ComptePhishingService
 {
     constructor(private http: HttpClient){}
 
